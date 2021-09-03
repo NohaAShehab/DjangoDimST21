@@ -1,0 +1,25 @@
+###
+add static files , images, css, js
+
+
+#### first create folder with name  --> static
+
+# when add static files you must restart server
+
+
+### if you want to strict the part of the url to be integer
+
+http://127.0.0.1:8000/staff/1
+ path('staff/<int:staff_id>', staffprofile)
+ ya django the parameter is int
+
+
+ ### to make the application more organized
+
+ we want to group the urls according to the application
+
+1- go to inside each application and create file urls.py
+
+
+when you request url ---> django will search about the url inside iti/urls.py
+

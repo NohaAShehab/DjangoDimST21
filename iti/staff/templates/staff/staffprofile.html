@@ -1,0 +1,66 @@
+{% extends 'staff/layouts/app.html' %}
+
+
+{% block body %}
+<!--        <h1> ITI</h1>-->
+<!--{{staffmembers}}-->
+    {% load static %}
+
+    <div class="container">
+
+        <h1> Member profile</h1>
+        {{member.name}}
+
+        <div class="card" style="width: 18rem; margin: 10px ; display: inline-block">
+            {{member.name}}
+            <img src="{% static 'staff/images/'|add:member.image %}" class="card-img-top" width="300" height="300">
+
+                <div class="card-body">
+
+                <h5 class="card-title"></h5>
+
+        </div>
+
+        </div>
+        <h1> Gender: {{member.gender}}</h1>
+<!--            {% if member.gender == 'm'  %}-->
+<!--            <h1>-->
+<!--                Gender :Male-->
+<!--            </h1>-->
+<!--            {% else %}-->
+<!--            <h1>-->
+<!--                Gender : Female-->
+<!--            </h1>-->
+<!--            {% endif %}-->
+
+         <h2> Masters: {{member.masters}}</h2>
+         <h2> Created at: {{member.created_at}}</h2>
+        <h2>updated at : {{member.update_at}}</h2>
+          <h2>Email : {{member.email}}</h2>
+        <h2>Dept : {{member.dept.name}}  {{member.dept.id}}</h2>
+
+        All members in this dept:
+<!--            {{member.dept.departments_set.all}}-->
+
+<!--            member.dept  &ndash;&gt; object from departments-->
+<!--            object  refers to departments  &ndash;&gt; id = 2-->
+<!--            select staff.name from staff, deptarments where staff.dept = departments.id-->
+
+            {% for std in member.dept.staff_set.all %}
+                <li>
+                {{std}}
+                    </li>
+            {% endfor %}
+        </pre>
+
+<!--        <pre>-->
+<!--            <h1> Other members of this track</h1>-->
+<!--            {{member.dept.Departments_set.all}}-->
+<!--            jhj-->
+<!--            {% for stf in member.dept.Departments_set.all %}-->
+<!--                {{stf}}-->
+<!--            {% endfor %}-->
+<!--        </pre>-->
+
+    </div>
+{% endblock %}

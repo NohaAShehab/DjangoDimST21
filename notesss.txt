@@ -1,0 +1,35 @@
+insert ---> post method
+
+update --> put patch
+
+view --> get method
+
+delete ---> delete method
+
+within form
+
+HTTP ---> know only 2 methods (GET, POST)
+delete ---> GET,
+
+
+
+## api views
+
+Django forms
+--> provide --> create form ---> django forms
+
+
+
+##### customize the django forms
+1- pip install django-crispy-forms
+2- add it to installed apps in settings  : 'crispy_forms',
+3- at the end of the settings file add this: CRISPY_TEMPLATE_PACK = 'bootstrap4'
+4- in html template
+{% load crispy_forms_tags %}
+
+to create the html form :   {{ form|crispy }}
+
+
+
+
+

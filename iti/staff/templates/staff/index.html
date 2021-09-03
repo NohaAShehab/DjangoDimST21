@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+
+<header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Staff website</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/staff/index">list staff</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/staff/welcome">Welcome</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/staff/image">Image</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/staff/test">Test</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+    </header>
+
+    <div class="container">
+        <li>Noha</li>
+         <li>Ali</li>
+         <li>Andrew</li>
+         <li>Ahmed</li>
+
+    </div>
+
+    <div>
+        Noha
+        <img src="">
+    </div>
+
+  <div>
+        Noha
+          <img src="{% static  'staff/images/image2.png'%}" width="50" height="50">
+  </div>
+  <div>
+        Noha
+        <img src="{% static  'staff/images/image2.png'%}" width="50" height="50">
+  </div>
+  <div>
+        Noha
+         <img src="{% static  'staff/images/image2.png'%}" width="50" height="50">
+    </div>
+    <footer class="container">
+        This my footer
+        <img src="{% static  'staff/images/image2.png'%}" width="50" height="50">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+</body>
+</html>

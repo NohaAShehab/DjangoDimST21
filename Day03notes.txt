@@ -1,0 +1,80 @@
+#### design pattern --->
+
+MVC ---> Model view controller design pattern
+
+---> divide application into smaller parts ---> can deal with
+
+
+M ---> Stands for model ----> Contains the logic of the application -database-
+Model --> represent the table
+
+V --> view --> what can you see
+
+Controller  --- > connect parts with each other
+
+_______________
+django ---> MVT
+
+M ---> Model
+
+V ---> View ----> connect parts with each other
+
+T ---> Template  ---> what can you see
+
+
+------------------
+
+
+# lecture objective
+
+# Dealing with models (Connect to the database ) via ORM
+
+ORM: Object relational mapping ----> Postgres(ORDBMS)
+### models
+
+
+### tracking , history files ---> migration files ---> keep tracking of the database changes
+##
+
+### 1- open settings.py
+
+# modify database connection
+
+## python manage.py migrate
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'USER': 'postgres',
+        'PASSWORD': 'iti'
+    }
+}
+
+
+install postgres driver --->  psycopg2
+
+we need to create migration file --> can be used to apply changes to database,
+Keep tracking of the changes in the models
+
+
+python manage.py makemigrations
+
+## check all the application models ,----> check changes inside it
+
+
+python manage.py migrate
+
+create table applicationName_ClassName (classname in model )
+staff_staff
+
+python manage.py migrate ---> check migrations files (didn't run before)
+
+
+
+CRUD --> CREATE, RETRIEVE, UPDATE, DELETE
+
+Models ---> hide database details

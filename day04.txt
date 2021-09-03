@@ -1,0 +1,150 @@
+### objective
+
+## use models to create, update, delete from forms
+
+
+!- Models (how django deal with database
+ORM --> Object Relational Mapping
+
+ORM ---> single Table ?
+
+## staff member is working in such department
+# define relation ( one to many ) ---> forign key of deptartments will added to staff
+
+
+### get members of the same department
+Backward relation
+member.dept.staff_set.all
+
+object member of type --> staff ---> is in department 2
+object has property  (dept) ---> dept reference deptartments(id)
+member.dept --> refers to the object from departemts where id = 2
+backword relation
+member.dept (refers to os dept) ---> get all staffmembers in this department
+member.dept.staff_set.all()
+
+
+
+### naming urls --->
+   path('<int:staff_id>', getstaffprofile, name="view_staff")
+
+         <a href="{% url 'view_staff' member.id %}" class="btn btn-primary">View profile</a>
+
+
+## interface ---> add staff, update staff, delete staff -- CRUD -> Create,
+
+### forms  ---> ORM ---> connect database
+Python --> ORM --> see all items inside the database as object
+Know how django --> create object, edit,
+
+Python --> provides python shell --> t
+
+pip install ipython
+
+python manage.py shell
+
+from staff.models import staff
+
+ staffmembers = Staff.objects.all()   # select * from staff;
+
+ # filter
+ select * from staff where dept= 10
+ Staff.objects.filter(dept =10)    ## query set --> objects needed to deal with
+
+Staff.objects.filter(id__gte=3)
+select * from staff where id >=3
+
+#########
+create object ---> ORM --->
+
+
+ Cannot assign "2": "Staff.dept" must be a "Departments" instance.
+  Staff.objects.create(name="asmaa",image="img2.png", gender= 'f', dept=d[0], email='asmaa@gmail.com')
+
+
+  ORM ---> as a class
+
+
+
+  In [30]: newstaff = Staff()
+
+In [31]: newstaff.name= "nadeen"
+
+In [32]: newstaff.image= "img2.png"
+
+In [33]: newstaff.gender= "f"
+
+In [34]: newdept = Departments.objects.filter(id =4)
+
+In [35]: newdept
+Out[35]: <QuerySet [<Departments: OS>]>
+
+In [36]: newstaff.dept= newdept[0]
+
+In [37]: newstaff
+Out[37]: <Staff: nadeen>
+
+In [38]: newstaff.email="nadeen@gmail.com"
+## object still in memory
+In [39]: newstaff.save()
+
+In [40]:
+
+
+##############
+Create form -> insert into database
+
+HTTP protocol
+http://127.0.0.1:8000/staff/staffindex
+
+HTTP --> stateless protocol ===>
+to handle http statless protocol
+Cookie , session
+
+cookie --> any server
+
+HTTP Methods
+
+HTTP ---> deal with it ---> GET, POST, PUT, DELETE, PATCH
+
+GET ---> retrieve data (pages)
+POST --> insert new data  ---> provide csrf
+Cross-Site Request Forgery
+
+PUT, PATCH --> update data on server
+DELETE ---> delete data on server
+
+
+request.post
+<QueryDict: {'csrfmiddlewaretoken': ['utVRkw4bozZ1pQo9GSZBd5k2RddiXYvj2kMEmnGaSf1puHYQ22WeJfslZ2Dg7J4b'],
+ 'name': ['dsd'],
+ 'email': ['ayekfa@hotmail.com']}>
+
+
+
+
+----
+Get ---> parameters --> are sent in query string parameters
+http://127.0.0.1:8000/staff/create?name=noha&email=ayekfa%40hotmail.com
+
+
+##### lab
+
+# products ---> SOUQ ---> create category each product
+
+categories  --> food, laptops, clothes, machines
+
+category , products  --> one to many
+
+1- click on product ---> product details->
+other products in this category  ((model backword ))
+
+create link --> add to navbar --> create product
+name, description, price, category
+click save --> save in database /
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+{% extends 'staff/layouts/app.html' %}
+
+
+{% block body %}
+{{staff}}
+
+<div class="container" xmlns="http://www.w3.org/1999/html">
+        <h1> Edit {{staff.name}} profile </h1>
+        <form action="" method="POST" >
+            {% csrf_token %}
+            <div class="form-group">
+            Name: <input type="text" name="name" value="{{staff.name}}">
+            </div>
+            <div class="form-group">
+            Email: <input type="email" name="email"  value="{{staff.email}}">
+            </div>
+             <div class="form-group">
+                        Image: <input type="text" name="image"  value="{{staff.image}}">
+             </div>
+             <div class="form-group">
+                gender:
+
+                 {% if staff.gender == "m"%}
+                     <input type="radio" name="gender" value="m" checked> Male
+                     <input type="radio" name="gender" value="f"> Female
+                 {%elif staff.gender == "f" %}
+                    <input type="radio" name="gender" value="m" > Male
+                    <input type="radio" name="gender" value="f" checked> Female
+                 {% else %}
+                    <input type="radio" name="gender" value="m" > Male
+                    <input type="radio" name="gender" value="f" > Female
+                 {%endif%}
+
+
+             </div>
+
+              <div class="form-group">
+                Department:
+                  <select name="dept">
+                    {% for dept in departments%}
+                      <option  value="{{dept.id}}"> {{dept.name}} </option>
+                  {% endfor %}
+                    </select>
+             </div>
+              <div class="form-group">
+                    <input type="submit">
+              </div>
+
+        </form>
+    </div>
+
+{% endblock %}

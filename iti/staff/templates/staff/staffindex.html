@@ -1,0 +1,38 @@
+{% extends 'staff/layouts/app.html' %}
+
+
+{% block body %}
+<!--        <h1> ITI</h1>-->
+<!--{{staffmembers}}-->
+    {% load static %}
+    <div class="container">
+    {% for member in staffmembers %}
+<!--        {{member}}-->
+<!--           <li> {{member.name}} </li>-->
+
+        <div class="card" style="width: 18rem; margin: 10px ; display: inline-block">
+            {{member.name}}
+            <img src="{% static 'staff/images/'|add:member.image %}" class="card-img-top" width="300" height="300">
+
+                <div class="card-body">
+
+                <h5 class="card-title"></h5>
+
+<!--                <a href="ggg/{{member.id}}" class="btn btn-primary">View profile</a>-->
+                    <a href="{% url 'view_staff' member.id %}" class="btn btn-primary">View profile</a>
+                    <a href="{% url 'edit_staff' member.id %}" class="btn btn-warning">Edit profile</a>
+                    <div>
+                        <form action="{% url 'delete_staff' member.id %}" method="delete">
+                            {% csrf_token %}
+                            <input type="submit"  class="btn btn-danger" value="Delete profile">
+                        </form>
+                    </div>
+
+
+        </div>
+
+        </div>
+
+    {% endfor %}
+    </div>
+{% endblock %}

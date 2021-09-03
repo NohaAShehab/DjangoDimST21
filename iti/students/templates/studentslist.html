@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students list</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <h1> Django is interesting</h1>
+    <h2> Class attendance in my first django lecture </h2>
+    {{students}} list
+    <ol>
+        {% for std in students %}
+            <li> <a href="{{std}}"> {{std}} </a> </li>
+        {% endfor %}
+    </ol>
+
+<!--    <ol>-->
+<!--        <li> <a href="amal"> Amal </a></li>-->
+<!--        <li><a href="mena">   Mena </a></li>-->
+<!--        <li><a href="sara">  Sara </a></li>-->
+<!--        <li> Asmaa</li>-->
+<!--        <li> Sama</li>-->
+<!--        <li> Yara</li>-->
+<!--        <li> Ghada</li>-->
+<!--        <li> Nadeen</li>-->
+<!--        <li> Dana</li>-->
+<!--        <li> Ahmed Amir</li>-->
+<!--        <li> Mohamed Ashraf</li>-->
+<!--        <li> Abdelrahman El-Araby</li>-->
+<!--        <li> Mayada</li>-->
+<!--        <li> Mostafa</li>-->
+<!--        <li> Mahmoud Bassyoni</li>-->
+<!--        <li> Mohamed Abdelnor</li>-->
+<!--    </ol>-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+</body>
+</html>

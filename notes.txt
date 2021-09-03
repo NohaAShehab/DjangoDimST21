@@ -1,0 +1,214 @@
+Web application
+
+software Application --> set of scripts that do something --> run on computer
+### laptop --> python3 ---> run application
+web application ---> is application software that runs on a web server,
+---> web application ---> request, send data to remote point
+
+web appliction meaning on google ---> send my request ( web application meaning)
+ to google server (webserver)
+
+webserver ---> set of scripts / pages --> that will be executed when client request
+
+
+# django --> use python, MVT Design pattern ---> to create web application web app
+based on python
+
+#### client (browser, postman)          ### server (web server)
+
+web server ---> software --> installed on your machine [part of the will act like server]
+
+request : https://www.google.com/webhp?authuser=3
+ال REQUEST راح لمكان يدور فيه على google  ... DNS Serve >> لما ال dns لقاه رد عليه بعنوان مكان google
+Google : 1.2.4.5:876 .. google ---> ip:port_number
+request contains  (google home)
+request sent to google address -->
+response : google page
+
+
+web server ---> ip, portnumber
+# create your first web application ---> web server on your machine
+# webserver application (Apache, nginx, tomcat )  --> Apache ( Wamp, Xamp)
+
+# django --> web application framework --> builtin development server
+
+# call application ---> ip:port ?
+any machine  --> has some virtual ports ----> machine accept requests
+## machine listen on port 80 --> http request
+## machine listen on port 443 --> https
+
+# Django --> web server ---> port  ---> 8000
+# rails ---> 3000  ---> (Ruby)
+
+
+################################################
+web server ---> python , php , java, ruby, c#, go , node js
+---> web server ---> response to the webbrowser ---> response (html,css,js)
+
+
+####  web application  ( client side parts, server side parts)
+
+client side parts ---> html ,css, js  ---> on client
+## fill in web application --> realtime data --> backend technology
+
+
+#django --> framework -->set of libraries or scripts --> that facilitate doing something
+# connect to http server -->
+
+django --> framework ---> python ---> web application
+
+# frameworks --> follow design pattern -->   MVT ---> Model, view, Template
+
+################ create your first project  ######
+1- python
+2- install django frame framework
+### install django framework global --->
+### virtual environment for each application
+
+
+######### create django web server
+
+### virtual env -->
+open cmd ---> pip install virtualenv
+### python -m venv .env  # create your env.
+
+## pip install django
+
+## create my first application
+### pip freeze  ---> to check if Django installed
+
+django-admin startproject project_name
+
+iti ---> (iti folder, manage.py)
+iti folder --> project files
+iti parent --> basic components of my application
+manage.py --> run server, run migration files ...
+
+### Now server is ready
+
+python manage.py runserver
+
+## result starting development server at http://127.0.0.1:8000
+localhost  --> http://127.0.0.1:
+portnumber 8000
+#######################
+
+web application ---> frontend (html,css,js)
+backend (databases, webserver)_
+
+python --> webserver ---> framework django ==>
+
+Django
+MVT
+
+
+##############
+Django application consists of smaller applications or components,
+
+iti\iti ---> main component,
+iti\iti\urls
+#####
+iti website
+students, staff, courses (and)
+create component for each item
+
+cd iti ---> python manage.py startapp students
+
+http://127.0.0.1/students  ---> not found
+
+1- define url ---> cd iti(main componetent) --->
+urls.py --->
+
+
+##########3
+we need to create our html file -->
+
+////
+http://127.0.0.1/students/python
+
+hello python
+
+
+
+############3 url
+
+http://127.0.0.1/students/list  ---> request url
+# request parameter
+http://127.0.0.1/students/<param>
+
+
+
+############## when you send your request  ---> url, noha
+
+### send request using different methods
+get, post
+
+get method --> method used to send parameters from client to any other page in url
+---parameters sent in the url
+
+post method  --> hide the request parameters
+
+change from one page to another  ---> get request --->
+
+
+
+#### template inheritance
+semantics "header, footer "
+
+web page --> server archiving --->  server know start , end ---> header, footer
+
+## screen reader ---> header, footer
+
+
+# file contain main compontents that i need to use
+# call file inside others
+
+# layout
+
+
+website (Souq)
+
+1- all products (name, image)
+2- click on product name ==> product page (name, image, description)
+3- contact us
+4- About us
+
+
+use template inheritance
+seprate the urls of the application
+
+
+template/products/
+
+static/products/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
