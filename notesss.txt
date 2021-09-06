@@ -28,6 +28,9 @@ Django forms
 {% load crispy_forms_tags %}
 
 to create the html form :   {{ form|crispy }}
+test
+
+
 
 
 
